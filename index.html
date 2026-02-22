@@ -6,7 +6,6 @@
 <title> LSV Prasad | ETL & Cloud Data Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <style>
@@ -31,7 +30,6 @@ height:100%;
 z-index:-1;
 }
 
-/* Progress Bar */
 #progress{
 position:fixed;
 top:0;
@@ -42,7 +40,6 @@ background:linear-gradient(90deg,#38bdf8,#a855f7);
 z-index:2000;
 }
 
-/* Navbar */
 nav{
 position:fixed;
 width:100%;
@@ -58,13 +55,12 @@ nav a{
 color:white;
 text-decoration:none;
 margin-left:25px;
-transition:0.3s;
 }
+
 nav a:hover{
 color:#38bdf8;
 }
 
-/* Hero */
 .hero{
 height:100vh;
 display:flex;
@@ -75,7 +71,7 @@ text-align:center;
 }
 
 .hero h1{
-font-size:50px;
+font-size:48px;
 }
 
 .hero span{
@@ -86,13 +82,13 @@ background:linear-gradient(90deg,#38bdf8,#a855f7);
 
 .typing{
 margin-top:15px;
-font-size:22px;
+font-size:20px;
 opacity:0.9;
 }
 
 .btn{
-margin-top:20px;
-padding:12px 30px;
+margin-top:15px;
+padding:12px 25px;
 border:none;
 border-radius:30px;
 background:linear-gradient(90deg,#38bdf8,#a855f7);
@@ -100,19 +96,19 @@ color:white;
 cursor:pointer;
 transition:0.4s;
 }
+
 .btn:hover{
 transform:scale(1.1);
-box-shadow:0 0 20px #38bdf8;
+box-shadow:0 0 15px #38bdf8;
 }
 
-/* Sections */
 section{
 padding:100px 10%;
 }
 
 h2{
 text-align:center;
-margin-bottom:50px;
+margin-bottom:40px;
 color:#38bdf8;
 }
 
@@ -132,23 +128,6 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* Skills */
-.skill{
-margin-bottom:25px;
-}
-.bar{
-background:#1e293b;
-height:10px;
-border-radius:20px;
-overflow:hidden;
-}
-.fill{
-height:100%;
-background:linear-gradient(90deg,#38bdf8,#a855f7);
-width:0;
-transition:2s ease;
-}
-
 footer{
 text-align:center;
 padding:40px;
@@ -166,63 +145,39 @@ background:#020617;
 <h3>LSV Prasad</h3>
 <div>
 <a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
+<a href="#resume">Resume</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
 <div class="hero">
-<h1>Hi, I'm <span>Leela Sai Vara Prasad</span></h1>
+<h1>Hi, I'm <span> Leela Sai Vara Prasad</span></h1>
 <div class="typing" id="typing"></div>
-<a href="R_LSV_PRASAD_CV.pdf" download><button class="btn">Download Resume</button></a>
+
+<a href="R_LSV_PRASAD_CV.pdf" target="_blank">
+<button class="btn">View Resume</button>
+</a>
+
+<a href="R_LSV_PRASAD_CV.pdf" download>
+<button class="btn">Download Resume</button>
+</a>
+
 </div>
 
 <section id="about">
 <h2>Professional Summary</h2>
 <div class="card">
-Software Quality Engineer with 3.8+ years of experience in ETL testing, cloud migration, SQL validation, Databricks automation, and Azure Data Factory.
+Software Quality Engineer with 3.8+ years of experience in ETL testing,
+data migration, DWH validation, BI testing, and automation frameworks
+across GCP and Azure.
 </div>
 </section>
 
-<section id="skills">
-<h2>Core Skills</h2>
-
-<div class="skill">
-<p>SQL & Data Validation</p>
-<div class="bar"><div class="fill" data-width="95%"></div></div>
-</div>
-
-<div class="skill">
-<p>ETL Testing</p>
-<div class="bar"><div class="fill" data-width="90%"></div></div>
-</div>
-
-<div class="skill">
-<p>Azure Data Factory</p>
-<div class="bar"><div class="fill" data-width="85%"></div></div>
-</div>
-
-<div class="skill">
-<p>Databricks & PySpark</p>
-<div class="bar"><div class="fill" data-width="80%"></div></div>
-</div>
-
-</section>
-
-<section id="experience">
-<h2>Professional Experience</h2>
-
+<section id="resume">
+<h2>Resume</h2>
 <div class="card">
-<h3>GPC (2022–2024)</h3>
-Executed ETL test cases for Oracle to GCP migration and ensured business rule compliance.
+<iframe src="R_LSV_PRASAD_CV.pdf" width="100%" height="600px" style="border-radius:15px;"></iframe>
 </div>
-
-<div class="card">
-<h3>CSX (2024–Present)</h3>
-Led Azure migration validation, processed 1M+ records, and built automation frameworks.
-</div>
-
 </section>
 
 <section id="contact">
@@ -241,30 +196,13 @@ Led Azure migration validation, processed 1M+ records, and built automation fram
 
 <script>
 
-/* Particles Config */
+/* Particles */
 particlesJS("particles-js", {
-particles: {
-number: { value: 80 },
-color: { value: "#38bdf8" },
-shape: { type: "circle" },
-opacity: { value: 0.5 },
-size: { value: 3 },
-line_linked: {
-enable: true,
-distance: 150,
-color: "#38bdf8",
-opacity: 0.4,
-width: 1
-},
-move: { enable: true, speed: 2 }
-},
-interactivity: {
-events: {
-onhover: { enable: true, mode: "repulse" }
-},
-modes: {
-repulse: { distance: 100 }
-}
+particles:{
+number:{value:70},
+color:{value:"#38bdf8"},
+line_linked:{enable:true,color:"#38bdf8"},
+move:{speed:2}
 }
 });
 
@@ -291,31 +229,12 @@ entry.target.classList.add("show");
 },{threshold:0.2});
 cards.forEach(card=>observer.observe(card));
 
-/* Skill Animation */
-const fills=document.querySelectorAll(".fill");
-const skillObserver=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.style.width=entry.target.getAttribute("data-width");
-}
-});
-},{threshold:0.5});
-fills.forEach(fill=>skillObserver.observe(fill));
-
 /* Progress */
 window.addEventListener("scroll",function(){
 let winScroll=document.documentElement.scrollTop;
 let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
 let scrolled=(winScroll/height)*100;
 document.getElementById("progress").style.width=scrolled+"%";
-});
-
-/* Tilt */
-VanillaTilt.init(document.querySelectorAll(".card"),{
-max:10,
-speed:400,
-glare:true,
-"max-glare":0.2,
 });
 
 </script>
